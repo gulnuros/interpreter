@@ -5,7 +5,10 @@ public class Main {
         Lexer lexer = new Lexer(rawInput);
 
         Token token;
-
+        do {
+            token = lexer.nextToken();
+            System.out.println(token);
+        } while (token.tokenType != TokenType.EOF);
     }
 
 }

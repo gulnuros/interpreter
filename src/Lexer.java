@@ -8,7 +8,12 @@ public class Lexer {
         this.input = input;
     }
 
+    public Token nextToken(){
+        // skip whitespace
+        while(position < input.length && Character.isWhiteSpace(input.charAt(position))){
+            position++;
+        }
 
 
-
+    }
 }
